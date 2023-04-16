@@ -1,9 +1,11 @@
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
+<script>
+  import NavBar from "../components/NavBar.svelte";
+  import HeroSection from "../components/HeroSection.svelte";
+  import InfoSection from "../components/InfoSection.svelte";
+  import FatFooter from "../components/FatFooter.svelte";
+</script>
 
-<style lang="postcss">
-  :global(html) {
-    background-color: theme(colors.gray.100);
-  }
-</style>
+<NavBar />
+<HeroSection />
+<InfoSection />
+<FatFooter />
