@@ -27,7 +27,7 @@
     <button class="btn btn-ghost btn-circle">
       <label tabindex="0" class="btn btn-ghost btn-circle avatar">
         <div class="w-10 rounded-full">
-          <img src="http://35.247.142.180/api/files/_pb_users_auth_/7dsvjwii219gafw/farmer_cXo6uw0Y55.jpg" />
+          <img src="https://cdn.downtoearth.org.in/library/large/2019-07-24/0.37377100_1563954075_gettyimages-498281885.jpg" />
         </div>
       </label>
     </button>

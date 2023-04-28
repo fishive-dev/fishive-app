@@ -18,6 +18,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"chart.js": "^4.2.1",
 		"daisyui": "^2.51.5",
 		"pocketbase": "^0.13.1"
 	}
