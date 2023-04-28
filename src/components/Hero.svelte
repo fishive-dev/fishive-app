@@ -1,13 +1,13 @@
 <div class="hero">
 	<div class="hero-content text-center">
-		<div class="max-w-screen bg-base-300 p-10 rounded-xl">
+		<div class="max-w- bg-base-300 p-10 rounded-xl">
 			<h1 class="text-5xl font-bold">Fish Cam 🐟</h1>
 			<p class="py-6">
 				Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
 				quasi. In deleniti eaque aut repudiandae et a id nisi.
 			</p>
 			<a
-				href="#_"
+				href="https://cam.fishive.site/" target="_blank"
 				class="relative inline-flex items-center justify-center inline-block p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 rounded-lg shadow-2xl group"
 			>
 				<span
