@@ -1,6 +1,29 @@
 <script>
 	let pizeoState = 'on';
   let pumpState = 'on';
+
+	let r = 255;
+	let g = 255;
+	let b = 255;
+	let a = 255;
+
+	async function doRGBToggle() {
+
+		var requestOptions = {
+			method: 'GET',
+			redirect: 'follow',
+      Headers: {
+        'Access-Control-Allow-Origin': 'https://devnode.fishive.site/'
+      }
+
+		};
+
+		fetch('http://devnode.fishive.site/rgb-state?state=on&r=' + r + '&g=' + g + '&b=' + b + '&brightness=' + a)
+			.then((response) => response.text())
+			.then((result) => console.log(result))
+			.catch((error) => console.log('error', error));
+	}
+
 	async function doPizeoToggle() {
 		if (pizeoState == 'on') {
 			pizeoState = 'off';
@@ -94,8 +117,11 @@
 			<span class="pl-2">Feed Now</span>
 		</button>
 		<div class="flex">
-			<input type="text" placeholder="Enter RGB Value" class="input input-bordered w-full max-w-xs" />
-			<button class="btn btn-square btn-primary ml-2">
+			<input type="text" bind:value={r} placeholder="R" class="input input-bordered w-full max-w-xs" />
+			<input type="text" bind:value={g} placeholder="G" class="input input-bordered w-full max-w-xs ml-2" />
+			<input type="text" bind:value={b} placeholder="B" class="input input-bordered w-full max-w-xs ml-2" />
+			<input type="text" bind:value={a} placeholder="A" class="input input-bordered w-full max-w-xs ml-2" />
+			<button class="btn btn-square btn-primary ml-2" on:click={doRGBToggle}>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 24 24"
