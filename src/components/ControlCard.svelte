@@ -1,11 +1,35 @@
 <script>
 	let pizeoState = 'on';
   let pumpState = 'on';
+	let servoState = 'on';
 
 	let r = 255;
 	let g = 255;
 	let b = 255;
 	let a = 255;
+
+
+	async function doServoToggle() {
+		if (servoState == 'on') {
+			servoState = 'off';
+		} else {
+			servoState = 'on';
+		}
+
+		var requestOptions = {
+			method: 'GET',
+			redirect: 'follow',
+			Headers: {
+				'Access-Control-Allow-Origin': 'https://devnode.fishive.site/'
+			}
+
+		};
+
+		fetch('https://devnode.fishive.site/servo?state=' + servoState, requestOptions)
+			.then((response) => response.text())
+			.then((result) => console.log(result))
+			.catch((error) => console.log('error', error));
+	}
 
 	async function doRGBToggle() {
 
@@ -106,7 +130,7 @@
 			<span class="pl-2">Toggle Pump</span>
 		</button>
 
-		<button class="btn btn-outline btn-warning">
+		<button class="btn btn-outline btn-warning" on:click={doServoToggle}>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
 				<path
 					fill-rule="evenodd"
